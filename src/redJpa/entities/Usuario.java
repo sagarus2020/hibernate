@@ -12,8 +12,6 @@ import javax.persistence.Id;
 @Entity
 public class Usuario implements Serializable {
 	
-	@Id
-	@Column(name="user")
 	private String usuario;
 	
 	private String clave;	

@@ -5,9 +5,8 @@
 <hibernate-configuration>
   <session-factory>
 
-		<class>redJpa.entities.Mensaje</class>
-		<class>redJpa.entities.Usuario</class>
-		<properties>
+	
+		
 		
 			<!-- Dialecto de la base de datos -->
     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
@@ -26,8 +25,8 @@
     <property name="hibernate.show_sql">false</property>
     <property name="hbm2ddl.auto">validate</property>
     
-    <!-- Archivos de mapeo -->
+    
+			<!-- Archivos de mapeo -->
     <mapping resource="mapeos/Usuario.hbm.xml"/>
-			</properties>
   </session-factory>
 </hibernate-configuration>
