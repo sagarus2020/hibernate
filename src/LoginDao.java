@@ -25,7 +25,5 @@ public class LoginDao {
     return "ERROR";
     }
     
-    protected void doPost(HttpServletRequest request,HttpServletResponse response){
-    
-    }
+   
 }
