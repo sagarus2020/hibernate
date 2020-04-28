@@ -1,4 +1,7 @@
 
+import java.io.IOException;
+
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import redJpa.entities.Usuario;
@@ -29,11 +32,27 @@ public class LoginServlet {
     System.out.println(userValidate);
     if(userValidate.contentEquals("SUCESS")){
         request.setAttribute("username", usuarioTxt);
-        request.getRequestDispatcher("/home.jsp").forward(request,response);
+        try {
+			request.getRequestDispatcher("/home.jsp").forward(request,response);
+		} catch (ServletException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
     }else{
         request.setAttribute("errMessage", userValidate);
-        request.getRequestDispatcher("/login.jsp").forward(request,response);
+        try {
+			request.getRequestDispatcher("/login.jsp").forward(request,response);
+		} catch (ServletException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
  
     }
     
